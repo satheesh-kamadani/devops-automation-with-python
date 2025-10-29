@@ -36,10 +36,9 @@ Install all required Python packages:
 pip install -r requirements.txt
 
 Example requirements.txt
-``` bash
 requests
 boto3
-```
+
 Usage
 
 ### 1. Trigger a Jenkins Pipeline
@@ -57,4 +56,29 @@ export JENKINS_TOKEN=your_api_token
 python deploy_to_eks.py
 ```
 Make sure your kubeconfig path and deployment YAML file are correctly configured.
+
+### 3. Run SonarQube Analysis
+``` bash
+python sonar_qube_analysis.py
+```
+Ensure your SonarQube server and authentication token are valid.
+
+### 4. Scan Docker Images with Trivy
+``` bash
+python trivy_scan_image.py
+```
+This will scan Docker images defined in the script and generate a consolidated report:
+trivy_scan_report.txt
+
+### 5. Check Service Health
+``` bash
+python service_health_check.py
+```
+The script checks /health endpoints of services and logs their status.
+
+### 6. AWS Resource Cleanup
+``` bash
+python aws_cleanup_stale_resources.py
+```
+This script identifies and deletes unused EBS volumes and other stale resources
 
