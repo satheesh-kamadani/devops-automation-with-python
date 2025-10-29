@@ -62,8 +62,8 @@ if __name__ == "__main__":
                 file.write(scan_report)
                 file.write("\n\n")
 
-        # ✅ Writing done safely inside `with` block
-        logging.info(f"✅ Scan completed. Full report saved to: {os.path.abspath(report_file)}")
+        # Writing done safely inside `with` block
+        logging.info(f" Scan completed. Full report saved to: {os.path.abspath(report_file)}")
 
     except PermissionError:
         logging.error("Permission denied: Unable to write report file.")
