@@ -1,21 +1,5 @@
 """
 Lambda function to delete unused AWS EBS snapshots.
-
-Description:
-- Lists all EBS snapshots owned by the account.
-- Identifies snapshots not associated with any volume or EC2 instance.
-- Sends an SNS notification before deletion.
-- Deletes stale snapshots to optimize storage costs.
-- Includes error handling and logging for better monitoring.
-- Can be scheduled using CloudWatch Events to run periodically.
-
-Dependencies:
-- boto3
-- IAM permissions:
-  * ec2:DescribeSnapshots
-  * ec2:DescribeInstances
-  * ec2:DeleteSnapshot
-  * sns:Publish
 """
 
 import boto3
