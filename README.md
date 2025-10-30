@@ -13,7 +13,8 @@ These scripts demonstrate how Python can be used effectively to integrate and au
 - 🔹 Run **SonarQube static code analysis** automatically from a Python script  
 - 🔹 Scan **Docker images** for vulnerabilities using **Trivy**  
 - 🔹 Perform **service health checks** for deployed microservices  
-- 🔹 Clean up **stale AWS EBS volumes** and other unused resources using Python  
+- 🔹 Clean up **stale AWS EBS volumes** and other unused resources using Python
+- 🔹 Build **Docker image build and push to Amazon ECR** using Python
 
 ---
 
@@ -82,3 +83,8 @@ python aws_cleanup_stale_resources.py
 ```
 This script identifies and deletes unused EBS volumes and other stale resources
 
+### 7. Build docker image and push to amazon ECR
+``` bash
+python aws_cleanup_stale_resources.py
+```
+This script will build the docker image and push to amazon ECR
