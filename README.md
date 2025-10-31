@@ -15,6 +15,7 @@ These scripts demonstrate how Python can be used effectively to integrate and au
 - 🔹 Perform **service health checks** for deployed microservices  
 - 🔹 Clean up **stale AWS EBS volumes** and other unused resources using Python
 - 🔹 Build **Docker image build and push to Amazon ECR** using Python
+- 🔹 Upload **Upload build jar file to artifactory** using Python
 
 ---
 
@@ -88,3 +89,10 @@ This script identifies and deletes unused EBS volumes and other stale resources
 python aws_cleanup_stale_resources.py
 ```
 This script will build the docker image and push to amazon ECR
+
+### 8. Upload build jar files to artifactory
+``` bash
+python upload_to_artifactory.py
+```
+This script will upload the build jar files to artifactory
+
