@@ -16,7 +16,7 @@ These scripts demonstrate how Python can be used effectively to integrate and au
 - 🔹 Clean up **stale AWS EBS volumes** and other unused resources using Python
 - 🔹 Build **Docker image build and push to Amazon ECR** using Python
 - 🔹 Upload **Upload build jar file to artifactory** using Python
-- 🔹 Analyze Logs **Log file analyze** using Python
+- 🔹 Analyze Logs **Log file analyze** using Python script
 
 ---
 
