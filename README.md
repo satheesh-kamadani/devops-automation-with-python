@@ -17,6 +17,7 @@ These scripts demonstrate how Python can be used effectively to integrate and au
 - 🔹 Build **Docker image build and push to Amazon ECR** using Python
 - 🔹 Upload **Upload build jar file to artifactory** using Python
 - 🔹 Analyze Logs **Log file analyze** using Python script
+- 🔹 Database backup **Postgresql database backup** using Python script
 
 ---
 
@@ -102,6 +103,13 @@ This script will upload the build jar files to artifactory
 python log_analyzer.py
 ```
 This script will analyze the log file and fetch the error count
+
+### 10. Postgresql database backup
+```
+python backup_database.py
+```
+This script takes a backup of a PostgreSQL database using pg_dump
+
 
 
 
