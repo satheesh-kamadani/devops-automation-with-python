@@ -18,6 +18,7 @@ These scripts demonstrate how Python can be used effectively to integrate and au
 - 🔹 Upload **Upload build jar file to artifactory** using Python
 - 🔹 Analyze Logs **Log file analyze** using Python script
 - 🔹 Database backup **Postgresql database backup** using Python script
+- 🔹 Scale deployment **Scale kubernetes deployement** using Python script
 
 ---
 
@@ -109,6 +110,12 @@ This script will analyze the log file and fetch the error count
 python backup_database.py
 ```
 This script takes a backup of a PostgreSQL database using pg_dump
+
+### 11. Scaling kubernetes deployment
+```
+python scale_kubernetes_deployment.py
+```
+This script will scale the kubernetes deployment to desired number of replicas
 
 
 
