@@ -1,0 +1,45 @@
+# -----------------------------------------------
+# Stage 1 — Build stage
+# -----------------------------------------------
+# Use an official Maven image with OpenJDK for building the project
+FROM maven:3.9.6-eclipse-temurin-17 AS build
+
+# Set working directory
+WORKDIR /opt/app
+
+# Copy only the pom.xml first to leverage Docker caching
+COPY pom.xml .
+
+# Download dependencies (cached if pom.xml hasn't changed)
+RUN mvn dependency:go-offline -B
+
+# Copy the rest of the source code
+COPY src ./src
+
+# Build the application (skip tests for faster build)
+RUN mvn clean package -DskipTests
+
+# -----------------------------------------------
+# Stage 2 — Runtime stage
+# -----------------------------------------------
+# Use a lightweight JDK runtime for running the app
+FROM eclipse-temurin:17-jre-alpine
+
+# Set working directory
+WORKDIR /opt/app
+
+# Copy the built JAR from the build stage
+COPY --from=build /opt/app/target/*.jar app.jar
+
+# Expose the application port
+EXPOSE 9090
+
+# Set environment variables
+ENV JAVA_OPTS="-Xms256m -Xmx512m"
+
+# Use a non-root user for better security
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
+
+# Run the Java application
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
