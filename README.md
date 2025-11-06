@@ -19,6 +19,7 @@ These scripts demonstrate how Python can be used effectively to integrate and au
 - 🔹 Analyze Logs **Log file analyze** using Python script
 - 🔹 Database backup **Postgresql database backup** using Python script
 - 🔹 Scale deployment **Scale kubernetes deployement** using Python script
+- 🔹 Slack notification **Send slack notifications ** using Python script
 
 ---
 
@@ -116,6 +117,12 @@ This script takes a backup of a PostgreSQL database using pg_dump
 python scale_kubernetes_deployment.py
 ```
 This script will scale the kubernetes deployment to desired number of replicas
+
+### 12. Send slack notification
+```
+python automated_slack_notifications.py
+```
+This script sends Slack notifications for various events
 
 
 
