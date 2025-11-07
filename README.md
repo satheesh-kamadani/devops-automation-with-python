@@ -20,6 +20,7 @@ These scripts demonstrate how Python can be used effectively to integrate and au
 - 🔹 Database backup **Postgresql database backup** using Python script
 - 🔹 Scale deployment **Scale kubernetes deployement** using Python script
 - 🔹 Slack notification **Send slack notifications ** using Python script
+- 🔹 Clean older artifacts **Delete old artifacts from artifactory ** using Python script
 
 ---
 
@@ -123,6 +124,12 @@ This script will scale the kubernetes deployment to desired number of replicas
 python automated_slack_notifications.py
 ```
 This script sends Slack notifications for various events
+
+### 13. Clean old artifacts
+``` bash
+python clean_old_artifacts.py
+```
+This script will delete old artifacts (older than 30 days) from Artifactory.
 
 
 
