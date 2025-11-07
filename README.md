@@ -19,8 +19,8 @@ These scripts demonstrate how Python can be used effectively to integrate and au
 - 🔹 Analyze Logs **Log file analyze** using Python script
 - 🔹 Database backup **Postgresql database backup** using Python script
 - 🔹 Scale deployment **Scale kubernetes deployement** using Python script
-- 🔹 Slack notification **Send slack notifications ** using Python script
-- 🔹 Clean older artifacts **Delete old artifacts from artifactory ** using Python script
+- 🔹 Slack notification **Send slack notifications** using Python script
+- 🔹 Clean older artifacts **Delete old artifacts from artifactory** using Python script
 
 ---
 
