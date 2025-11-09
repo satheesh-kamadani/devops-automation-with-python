@@ -6,6 +6,10 @@ These scripts demonstrate how Python can be used effectively to integrate and au
 
 ---
 
+## Python Cloud Automation
+
+![alt text](image-1.png)
+
 ## 🧩 Features
 
 - 🔹 Trigger **Jenkins pipelines** using Python and the Jenkins REST API  
